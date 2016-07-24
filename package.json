@@ -1,0 +1,45 @@
+{
+  "name": "impequid-filesystem-server",
+  "version": "0.0.1",
+  "description": "Filesystem server for Impequid.",
+  "main": "build/server/",
+  "scripts": {
+    "start": "node build/server/",
+    "build": "babel --presets es2015 source/ -d build/",
+    "watch": "nodemon --watch source/ --exec \"npm run build --silent && npm run start --silent\""
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dodekeract/impequid-filesystem-server.git"
+  },
+  "keywords": [
+    "impequid",
+    "filesystem",
+    "server",
+    "encrypted",
+    "rest",
+    "distributed",
+    "cloud"
+  ],
+  "author": "Florian Wendelborn",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/dodekeract/impequid-filesystem-server/issues"
+  },
+  "homepage": "https://github.com/dodekeract/impequid-filesystem-server#readme",
+  "dependencies": {
+    "async": "^2.0.0",
+    "babel-polyfill": "^6.9.1",
+    "crypto-js": "^3.1.6",
+    "koa": "^1.2.0",
+    "koa-body": "^1.4.0",
+    "koa-body-parser": "^1.1.2",
+    "koa-router": "^5.4.0",
+    "mkdirp": "^0.5.1"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.10.1",
+    "babel-preset-es2015": "^6.9.0",
+    "nodemon": "^1.9.2"
+  }
+}
